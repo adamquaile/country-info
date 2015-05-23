@@ -1,0 +1,39 @@
+{
+    "name": "adamquaile/php-country-info",
+    "description": "Simple API for ISO-3166 country information",
+    "config": {
+        "bin-dir": "bin/"
+    },
+    "autoload": {
+        "psr-4": {
+            "AdamQuaile\\CountryInfo\\": "src",
+            "AdamQuaile\\CountrInfo\\Tests\\Behat\\": "features/bootstrap"
+        }
+    },
+    "repositories": {
+        "debian-isocodes": {
+            "type": "package",
+            "package": {
+                "name": "debian/isocodes",
+                "version": "3.57.12",
+                "source": {
+                    "url": "git://git.debian.org/git/iso-codes/iso-codes.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        }
+    },
+    "authors": [
+        {
+            "name": "Adam Quaile",
+            "email": "adamquaile@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "behat/behat": "^3.0",
+        "debian/isocodes": "~3.57",
+        "phpspec/phpspec": "^2.2"
+    }
+}

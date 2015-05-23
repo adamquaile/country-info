@@ -1,0 +1,4 @@
+suites:
+    default:
+        namespace: AdamQuaile\CountryInfo
+        psr4_prefix: AdamQuaile\CountryInfo
