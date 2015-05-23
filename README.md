@@ -9,18 +9,15 @@ This package provides country information based on the ISO-3166 standard and imp
 ### Retrieving a country list
 
 ```php
-$countries = AdamQuaile\CountryInfo\Countries::all(); // alias for AdamQuaile\CountryInfo\Iso\Iso3166\Iso3166::allEntries();
+$countries = AdamQuaile\CountryInfo\Countries::all(); // alias for AdamQuaile\CountryInfo\Iso\Iso3166::allEntries();
 ```
 
-This will return an array of countries (of type `AdamQuaile\CountryInfo\Iso\Iso3166\Iso3166Entry`)
+This will return an array of countries (of type `AdamQuaile\CountryInfo\Iso\Iso3166\Entry`)
 
 ### Retrieving a specific country
 
 ```php
-$uk = AdamQuaile\CountryInfo\Iso\Iso3166\Iso3166::fromAlpha2('GB');
-$uk = AdamQuaile\CountryInfo\Iso\Iso3166\Iso3166::fromAlpha2('GBR');
-$uk = AdamQuaile\CountryInfo\Iso\Iso3166\Iso3166::fromNumericCode('826');
-$uk = AdamQuaile\CountryInfo\Iso\Iso3166\Iso3166::fromName('United Kingdom');
+$uk = AdamQuaile\CountryInfo\Country::fromIso3166Alpha2('GB');
 ```
 
 # Design goals

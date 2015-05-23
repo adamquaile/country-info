@@ -25,3 +25,4 @@ install:
 
 script:
    - bin/phpspec run --format=pretty
+   - phpunit --bootstrap=vendor/autoload.php tests/

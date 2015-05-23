@@ -6,8 +6,7 @@
     },
     "autoload": {
         "psr-4": {
-            "AdamQuaile\\CountryInfo\\": "src",
-            "AdamQuaile\\CountrInfo\\Tests\\Behat\\": "features/bootstrap"
+            "AdamQuaile\\CountryInfo\\": "src"
         }
     },
     "repositories": {
@@ -32,7 +31,6 @@
     ],
     "require": {},
     "require-dev": {
-        "behat/behat": "^3.0",
         "debian/isocodes": "~3.57",
         "phpspec/phpspec": "^2.2"
     }

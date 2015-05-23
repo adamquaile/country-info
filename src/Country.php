@@ -6,7 +6,6 @@ use AdamQuaile\CountryInfo\Iso\Iso3166\Entry;
 
 class Country
 {
-
     /**
      * @var Entry
      */

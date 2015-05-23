@@ -1,5 +1,0 @@
-default:
-    suites:
-        generation:
-            contexts:
-                - AdamQuaile\Tests\Behat\GenerationContext
