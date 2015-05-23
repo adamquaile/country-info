@@ -28,7 +28,22 @@ This will return an array of countries (of type `AdamQuaile\CountryInfo\Iso\Iso3
 ```php
 $uk = AdamQuaile\CountryInfo\Country::fromIso3166Alpha2('GB');
 ```
- 
+
+### Digging into the country details
+
+```php
+# Basic details
+echo $uk->name();                    // United Kingdom
+
+# ISO 3166 specific details
+echo $uk->iso3166()->alpha2Code();   // GB
+echo $uk->iso3166()->alpha3Code();   // GBR
+echo $uk->iso3166()->numericCode();  // 826
+echo $uk->iso3166()->name();         // United Kingdom
+echo $uk->iso3166()->commonName();   // null (some countries don't have these listed)
+echo $uk->iso3166()->officialName(); // United Kingdom of Great Britain and Northern Ireland
+```
+
 
 ## Where does this information come from? 
 Country names and codes come from the ISO-3166 standard and are imported from the debian isocodes repository at git://git.debian.org/git/iso-codes/iso-codes.git .
