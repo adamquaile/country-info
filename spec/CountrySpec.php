@@ -24,13 +24,23 @@ class CountrySpec extends ObjectBehavior
         );
     }
 
+    private function moldova()
+    {
+        return new Entry(
+            new Alpha2Code('MD'),
+            new Alpha3Code('MDA'),
+            new NumericCode('498'),
+            new Name('Moldova'),
+            new Name('Moldova, Republic of'),
+            new Name('Republic of Moldova')
+        );
+    }
+
     function it_takes_country_info_from_iso_3166()
     {
-        $iso3166 = $this->uk();
-        $this->beConstructedWith($iso3166);
+        $this->beConstructedWith($this->uk());
 
         $this->name()->shouldBeLike(new Name('United Kingdom'));
-        $this->officialName()->shouldBeLike(new Name('United Kingdom of Great Britain and Northern Ireland'));
     }
 
     function it_provides_iso_info()
@@ -38,5 +48,11 @@ class CountrySpec extends ObjectBehavior
         $iso3166 = $this->uk();
         $this->beConstructedWith($iso3166);
         $this->iso3166()->shouldReturn($iso3166);
+    }
+
+    function it_returns_common_name_before_name()
+    {
+        $this->beConstructedWith($this->moldova());
+        $this->name()->shouldBeLike(new Name('Moldova'));
     }
 }

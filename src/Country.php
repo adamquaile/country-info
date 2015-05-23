@@ -27,11 +27,6 @@ class Country
 
     public function name()
     {
-        return $this->iso3166->name();
-    }
-
-    public function officialName()
-    {
-        return $this->iso3166->officialName();
+        return $this->iso3166->commonName() ?: $this->iso3166->name();
     }
 }

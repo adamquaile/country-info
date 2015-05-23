@@ -1,0 +1,10 @@
+<?php
+
+%%comments%%
+
+namespace AdamQuaile\CountryInfo\Iso\Iso3166;
+
+final class Data
+{
+    public static $infoByAlpha2Code = %%infoByAlpha2Code%%;
+}
